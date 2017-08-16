@@ -1,45 +1,73 @@
-body
-  background-color: #21A588
-  
-@keyframes spinner
-  0%
-    transform: rotate(0deg)
-    border-radius: 30px 
-  
-  50%
-    transform: rotate(180deg)
-    border: 10px solid white
-    border-radius: 0px
-  
-  100%
-    transform: rotate(360deg)
-    border-radius: 30px
-  
-.spinner
-  border-radius: 100px
-  position: fixed
-  width: 50px
-  height: 50px
-  top: 50%
-  left: 50%
-  margin-left: -17px
-  margin-top: -17px
-  
-  
-  &:after, &:before
-    content: ''
-    position: fixed
-    border: 2px solid black
-    width: 50px
-    height: 50px
-  
-  &:after
-    animation: spinner 2s linear infinite
-  
-  &:before
-    width: 64px
-    height: 64px
-    margin-left: -7px
-    margin-top: -7px
-    animation: spinner 2s linear infinite
-    animation-direction: reverse
+body {
+  background-color: #21A588;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-radius: 30px;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border: 10px solid white;
+    border-radius: 0px;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-radius: 30px;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-radius: 30px;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border: 10px solid white;
+    border-radius: 0px;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-radius: 30px;
+  }
+}
+.spinner {
+  border-radius: 100px;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -17px;
+  margin-top: -17px;
+}
+.spinner:after, .spinner:before {
+  content: "";
+  position: fixed;
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
+}
+.spinner:after {
+  -webkit-animation: spinner 2s linear infinite;
+          animation: spinner 2s linear infinite;
+}
+.spinner:before {
+  width: 64px;
+  height: 64px;
+  margin-left: -7px;
+  margin-top: -7px;
+  -webkit-animation: spinner 2s linear infinite;
+          animation: spinner 2s linear infinite;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+}
+
